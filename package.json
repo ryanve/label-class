@@ -17,6 +17,7 @@
     "angular",
     "angular-directive",
     "directive",
+    "controls",
     "label",
     "input",
     "class",
