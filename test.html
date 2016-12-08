@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="test">
+<title>Tests</title>
+<style>
+  *, :before, :after { box-sizing: border-box }
+  html { font: 1em/2 sans-serif; background: silver; color: black }
+  body { width: 100%; margin: auto; padding: 1em }
+  input, textarea { font: inherit }
+  section { display: block }
+  label { display: block; padding: 1em; background: whitesmoke }
+  fieldset { padding: 0; border: 0; margin: 0 0 1em; }
+  label, input { margin: 0 }
+
+  [label-class]::after {
+    display: inline-block;
+    content: 'class="' attr(class) '"';
+    color: green;
+  }
+
+  .enabled {
+    cursor: pointer;
+  }
+</style>
+
+<form name="test" ng-controller="test">
+  <fieldset>
+    <label data-test="disabled checked" label-class='{"disabled": ":disabled", "checked": ":checked", "enabled": ":enabled"}'>
+      <input ng-model="this.fakeCheckbox" type="checkbox">
+    </label>
+  </fieldset>
+  <fieldset>
+    <label data-test="disabled checked" label-class='{"disabled": ":disabled", "checked": ":checked", "enabled": ":enabled"}'>
+      <input ng-model="this.fakeRadio" type="radio" name="radioTest">
+    </label>
+    <label data-test="disabled checked" label-class='{"disabled": ":disabled", "checked": ":checked", "enabled": ":enabled"}'>
+      <input ng-model="this.fakeRadio" type="radio" name="radioTest">
+    </label>
+  </fieldset>
+  <input type="submit">
+</form>
+
+<script src="vendor.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> -->
+<script src="index.js"></script>
+<script src="test.js"></script>
