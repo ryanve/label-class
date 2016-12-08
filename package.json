@@ -4,7 +4,7 @@
   "description": "Angular label-class directive",
   "main": "index.js",
   "scripts": {
-    "vendor": "browserify -r associated -r ssv -r angular -o vendor.js",
+    "vendor": "browserify -r associated -r ssv -o vendor.js",
     "postinstall": "npm run vendor",
     "test": "node test.js"
   },
@@ -32,7 +32,6 @@
     "associated": "^0.3.0"
   },
   "devDependencies": {
-    "angular": "^1.5.9",
     "browserify": "^13.1.1",
     "open": "0.0.5",
     "ssv": "^2.0.0"

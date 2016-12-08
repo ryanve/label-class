@@ -1,12 +1,12 @@
-!function(name, make) {
+!function(root, name, make) {
   make = make()
-  var angular = require('angular')
+  var angular = root.angular || require('angular')
   var app = angular.module(name, []).directive(name, make)
   if (typeof module != 'undefined') module.exports = make
-  else this[name] = make
-}('labelClass', function() {
+  else root[name] = make
+}(this, 'labelClass', function() {
   return function() {
-    var angular = require('angular')
+    var angular = window.angular || require('angular')
     var control = require('associated').control
 
     return {
