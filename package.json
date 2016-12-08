@@ -4,7 +4,7 @@
   "description": "Angular label-class directive",
   "main": "index.js",
   "scripts": {
-    "vendor": "browserify -r ssv -r angular -o vendor.js",
+    "vendor": "browserify -r associated -r ssv -r angular -o vendor.js",
     "postinstall": "npm run vendor",
     "test": "node test.js"
   },
@@ -28,7 +28,9 @@
   "bugs": {
     "url": "https://github.com/ryanve/label-class/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "associated": "^0.3.0"
+  },
   "devDependencies": {
     "angular": "^1.5.9",
     "browserify": "^13.1.1",

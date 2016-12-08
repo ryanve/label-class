@@ -3,11 +3,7 @@ typeof document == 'undefined' ?
 angular.module('test', []).controller('test', ['$timeout', '$scope', function($timeout, $scope) {
   var ssv = require('ssv')
   var forEach = [].forEach
-
-  function associatedInput(label) {
-    var id = label.attr('for');
-    return id ? new label.constructor('#' + id) : label.find('input');
-  }
+  var control = require('associated').control
 
   function pseudo(name) {
     return ':' + name
@@ -22,7 +18,7 @@ angular.module('test', []).controller('test', ['$timeout', '$scope', function($t
   }
 
   function property(name, label) {
-    var input = associatedInput(label)
+    var input = control(label)
     ok(
       label.hasClass(name),
       input.is(pseudo(name)),
