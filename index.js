@@ -5,14 +5,19 @@
   if (typeof module != 'undefined') module.exports = make
   else this[name] = make
 }('labelClass', function() {
+
+  function associatedInput(label) {
+    var id = label.attr('for');
+    return id ? new label.constructor('#' + id) : label.find('input');
+  }
+
   return function() {
     var angular = require('angular')
-    var associated = require('associated')
 
     return {
       restrict: 'A',
       link: function (scope, label, atts) {
-        var input = associated.input(label)
+        var input = associatedInput(label)
         var map = scope.$eval(atts.labelClass)
 
         angular.forEach(map, function(state, classes) {
