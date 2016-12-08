@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "vendor": "browserify -r associated -r ssv -o vendor.js",
-    "postinstall": "npm run vendor",
+    "pretest": "npm run vendor",
     "test": "node test.js"
   },
   "homepage": "https://github.com/ryanve/label-class",
