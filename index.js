@@ -1,6 +1,6 @@
 !function(root, name, make) {
-  if (typeof module != 'undefined') module.exports = make()
-  else if (typeof define == 'function') define(make)
+  if (typeof module != 'undefined' && module.exports) module.exports = make()
+  else if (typeof define == 'function' && define.amd) define(make)
   else root[name] = make()
 }(this, 'labelClass', function() {
   return function() {
