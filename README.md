@@ -26,7 +26,6 @@ angular.module('yourApp', []).directive('labelClass', require('label-class'))
 ## Development
 
 ```
-npm install
 npm start
 npm test
 ```

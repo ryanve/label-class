@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "vendor": "browserify -r associated -r ssv -o vendor.js",
+    "prestart": "npm update",
     "start": "npm run vendor",
     "test": "node test.js"
   },
