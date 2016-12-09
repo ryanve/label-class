@@ -11,11 +11,13 @@
   <a class="button" href="test.html">Tests</a>
 </header>
 
-<pre aria-label="example"><code>&lt;label <b>label-class</b>='{"is-enabled": ":enabled", "is-checked": ":checked"}'&gt;
+<h2>Example</h2>
+<pre><code>&lt;label <b>label-class</b>='{"is-enabled": ":enabled", "is-checked": ":checked"}'&gt;
   &lt;input ng-model="this.example" type="checkbox"&gt;
 &lt;/label&gt;</code></pre>
 
-<form name="test" ng-controller="test" aria-label="live demo">
+<h2>Live Demo</h2>
+<form name="test" ng-controller="test">
   <fieldset>
     <label data-test="checked" label-class='{"is-enabled": ":enabled", "is-checked": ":checked"}'>
       <input ng-model="this.fakeCheckbox" type="checkbox">
