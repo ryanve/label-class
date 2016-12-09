@@ -1,26 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" ng-app="test">
 <title>Tests</title>
-<style>
-  *, :before, :after { box-sizing: border-box }
-  html { font: 1em/2 sans-serif; background: silver; color: black }
-  body { width: 100%; margin: auto; padding: 1em }
-  input, textarea { font: inherit }
-  section { display: block }
-  label { display: block; padding: 1em; background: whitesmoke }
-  fieldset { padding: 0; border: 0; margin: 0 0 1em; }
-  label, input { margin: 0 }
-
-  [label-class]::after {
-    display: inline-block;
-    content: 'class="' attr(class) '"';
-    color: green;
-  }
-
-  .enabled {
-    cursor: pointer;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 
 <form name="test" ng-controller="test">
   <fieldset>

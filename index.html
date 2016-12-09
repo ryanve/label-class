@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="test">
+<title>label-class</title>
+<link rel="stylesheet" href="style.css">
+
+<header class="m-b-2">
+  <h1 class="reset">label-class</h1>
+  <a class="button" href="https://github.com/ryanve/label-class">Github</a>
+  <a class="button" href="https://www.npmjs.com/package/label-class">npm</a>
+  <a class="button" href="test.html">Tests</a>
+</header>
+
+<pre aria-label="example"><code>&lt;label <b>label-class</b>='{"is-enabled": ":enabled", "is-checked": ":checked"}'&gt;
+  &lt;input ng-model="this.example" type="checkbox"&gt;
+&lt;/label&gt;</code></pre>
+
+<form name="test" ng-controller="test" aria-label="live demo">
+  <fieldset>
+    <label data-test="checked" label-class='{"is-enabled": ":enabled", "is-checked": ":checked"}'>
+      <input ng-model="this.fakeCheckbox" type="checkbox">
+      Test checkbox. Current classes:
+    </label>
+  </fieldset>
+</form>
+
+<script src="vendor.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="index.js"></script>
+<script src="test.js"></script>
