@@ -30,7 +30,7 @@
     "url": "https://github.com/ryanve/label-class/issues"
   },
   "dependencies": {
-    "associated": "^0.3.0"
+    "associated": "^0.4.0"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
