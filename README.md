@@ -1,6 +1,14 @@
 # label-class
 Angular `label-class` directive
 
+## Example
+
+```js
+<label label-class='{"is-disabled": ":disabled", "is-checked": ":checked"}'>
+  <input ng-model="this.example" type="checkbox">
+</label>
+```
+
 ## Setup
 
 #### Install via npm
@@ -13,14 +21,6 @@ npm install label-class --save
 
 ```js
 angular.module('yourApp', []).directive('labelClass', require('label-class'))
-```
-
-## Example
-
-```js
-<label label-class='{"is-disabled": ":disabled", "is-checked": ":checked"}'>
-  <input ng-model="this.example" type="checkbox">
-</label>
 ```
 
 ## Development
