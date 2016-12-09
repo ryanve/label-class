@@ -1,8 +1,7 @@
 !function(root, name, make) {
-  make = make()
-  if (typeof module != 'undefined') module.exports = make
-  else root[name] = make
-  if (typeof define == 'function') define(function() { return make })
+  if (typeof module != 'undefined') module.exports = make()
+  else if (typeof define == 'function') define(make)
+  else root[name] = make()
 }(this, 'labelClass', function() {
   return function() {
     var angular = window.angular || require('angular')
