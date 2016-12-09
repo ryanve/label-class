@@ -4,6 +4,7 @@
   var app = angular.module(name, []).directive(name, make)
   if (typeof module != 'undefined') module.exports = make
   else root[name] = make
+  if (typeof define == 'function') define(function() { return make })
 }(this, 'labelClass', function() {
   return function() {
     var angular = window.angular || require('angular')
