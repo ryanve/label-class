@@ -17,7 +17,13 @@ Angular `label-class` directive
 npm install label-class --save
 ```
 
-#### Define the directive on your app
+#### Declare `'labelClass'` as a dependency on your app
+
+```js
+angular.module('yourApp', ['labelClass'])
+```
+
+#### **Or** define the directive on your app
 
 ```js
 angular.module('yourApp', []).directive('labelClass', require('label-class'))

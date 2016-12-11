@@ -1,7 +1,6 @@
 !function(root, name, make) {
-  if (typeof module != 'undefined' && module.exports) module.exports = make()
-  else if (typeof define == 'function' && define.amd) define(make)
-  else root[name] = make()
+  (window.angular || require('angular')).module(name, []).directive(name, make = make())
+  typeof module != 'undefined' && module.exports ? module.exports = make : root[name] = make
 }(this, 'labelClass', function() {
   return function() {
     var angular = window.angular || require('angular')

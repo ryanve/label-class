@@ -1,6 +1,6 @@
 typeof document == 'undefined' ?
   require('open')('test.html') :
-angular.module('test', []).controller('test', ['$timeout', '$scope', function($timeout, $scope) {
+angular.module('test', ['labelClass']).controller('test', ['$timeout', '$scope', function($timeout, $scope) {
   var ssv = require('ssv')
   var forEach = [].forEach
   var control = require('associated').control
@@ -48,4 +48,4 @@ angular.module('test', []).controller('test', ['$timeout', '$scope', function($t
       $timeout(apply)
     })
   })
-}]).directive('labelClass', labelClass);
+}]);
